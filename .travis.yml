@@ -5,4 +5,4 @@ services:
 before_install:
 - docker build -t "aaronbbrown/cfupip:$TRAVIS_BRANCH" .
 after_success:
-- docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" && docker push aaronbbrown/cfupip
+- docker login -u='$DOCKER_USERNAME' -p='$DOCKER_PASSWORD' && docker push aaronbbrown/cfupip
