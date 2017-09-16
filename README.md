@@ -1,5 +1,7 @@
 # cfupip
 
+[![Build Status](https://travis-ci.org/aaronbbrown/cfupip.svg?branch=master)](https://travis-ci.org/aaronbbrown/cfupip)
+
 Set a CloudFlare DNS record to your public IP.
 
 # Usage:
