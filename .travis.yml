@@ -1,11 +1,8 @@
 sudo: required
 language: shell
 services:
-  - docker
+- docker
 before_install:
-  - docker build -t aaronbbrown/cfupip .
+- docker build -t "aaronbbrown/cfupip:$TRAVIS_BRANCH" .
 after_success:
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
-      docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-      docker push aaronbbrown/cfupip;
-    fi
+- docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" && docker push aaronbbrown/cfupip
