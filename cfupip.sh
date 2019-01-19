@@ -22,8 +22,4 @@ if [ -z "$IP" ]; then
   exit 1
 fi
 
-cfcli --email "$EMAIL" \
-      --domain "$DOMAIN" \
-      --token "$TOKEN" \
-      --type A \
-      edit "$RECORD" "$IP"
+cfcli -e "$EMAIL" -d "$DOMAIN" -k "$TOKEN" -t A edit "$RECORD" "$IP" 2>&1
